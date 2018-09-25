@@ -2,6 +2,8 @@
 
 ```python
 import pandas as pd
+import warnings
+warnings.filterwarnings('ignore')
 ```
 
 
@@ -304,18 +306,10 @@ print('Training MSE:', mean_squared_error(y_train, ols.predict(X_train)))
 print('Testing MSE:', mean_squared_error(y_test, ols.predict(X_test)))
 ```
 
-    C:\Users\matt\Anaconda3wenv\lib\site-packages\ipykernel_launcher.py:12: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-      if sys.path[0] == '':
-
-
-    Training r^2: 0.817427902969
-    Testing r^2: 0.781406876472
-    Training MSE: 1131227567.16
-    Testing MSE: 1451098829.83
+    Training r^2: 0.823908907201
+    Testing r^2: 0.785239568446
+    Training MSE: 1083602888.48
+    Testing MSE: 1448610037.61
 
 
 # Model Tuning
@@ -343,18 +337,10 @@ print('Training MSE:', mean_squared_error(y_train, ols.predict(X_train)))
 print('Testing MSE:', mean_squared_error(y_test, ols.predict(X_test)))
 ```
 
-    C:\Users\matt\Anaconda3wenv\lib\site-packages\ipykernel_launcher.py:6: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-      
-
-
-    Training r^2: 0.825783528267
-    Testing r^2: 0.770351615005
-    Training MSE: 1014412838.6
-    Testing MSE: 1781752809.01
+    Training r^2: 0.800636556693
+    Testing r^2: 0.853560391708
+    Training MSE: 1342224346.23
+    Testing MSE: 736512635.577
 
 
 # Feature Engineering Dummy Variables
@@ -555,10 +541,10 @@ print('Training MSE:', mean_squared_error(y_train, ols.predict(X_train)))
 print('Testing MSE:', mean_squared_error(y_test, ols.predict(X_test)))
 ```
 
-    Training r^2: 0.926008782661
-    Testing r^2: -9.1820591543e+25
-    Training MSE: 462711521.155
-    Testing MSE: 5.93722879669e+35
+    Training r^2: 0.934139831372
+    Testing r^2: -2.03880441798e+26
+    Training MSE: 412016810.023
+    Testing MSE: 1.31683626299e+36
 
 
 # Overfitting
@@ -632,14 +618,10 @@ print('Training MSE:', mean_squared_error(y_train, L1.predict(X_train)))
 print('Testing MSE:', mean_squared_error(y_test, L1.predict(X_test)))
 ```
 
-    Training r^2: 0.935523252639
-    Testing r^2: 0.440139849582
-    Training MSE: 423653609.477
-    Testing MSE: 3076618610.36
-
-
-    C:\Users\matt\Anaconda3wenv\lib\site-packages\sklearn\linear_model\coordinate_descent.py:491: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Fitting data with very small alpha may cause precision problems.
-      ConvergenceWarning)
+    Training r^2: 0.941150558085
+    Testing r^2: 0.647003659993
+    Training MSE: 368158172.604
+    Testing MSE: 2279955728.58
 
 
 Notice while our training is still far superior to testing, the r^2 coefficient is positive and the testing MSE is at least of a comparable magnitude.
@@ -654,14 +636,10 @@ print('Training MSE:', mean_squared_error(y_train, L1.predict(X_train)))
 print('Testing MSE:', mean_squared_error(y_test, L1.predict(X_test)))
 ```
 
-    Training r^2: 0.934335506233
-    Testing r^2: 0.896833741955
-    Training MSE: 431457865.627
-    Testing MSE: 566933062.171
-
-
-    C:\Users\matt\Anaconda3wenv\lib\site-packages\sklearn\linear_model\coordinate_descent.py:491: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Fitting data with very small alpha may cause precision problems.
-      ConvergenceWarning)
+    Training r^2: 0.940744502048
+    Testing r^2: 0.65690522635
+    Training MSE: 370698432.016
+    Testing MSE: 2216002847.54
 
 
 # Practice
